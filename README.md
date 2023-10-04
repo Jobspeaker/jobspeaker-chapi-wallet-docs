@@ -9,7 +9,7 @@ The *jobspeaker-chapi-wallet* has been bootstrapped from the CHAPI [web wallet d
 
 DID Authentication is supported (using `ed25519` for signatures), as well as Verifiable Presentations that include multiple VCs for the VC-Playground Verifier demo flow.
 
-The wallet demo has been tested on 
+The wallet demo has been tested on the following browsers:
 - Google Chrome Version 117.0.5938.132 (Official Build) (arm64)
 - Google Chrome Version 117.0.5938.73 (Official Build) (arm64)
 - :warning: Firefox Version 117.0.5938.132 (Official Build) (arm64) :warning: **Please note that we suggest Chrome for testing purposes.**
@@ -17,7 +17,7 @@ The wallet demo has been tested on
 ## Usage
 
 ### Credential Management & Login
-To start the wallet demo, you need to first authorize the application to manage Verifiable Credentials for you. Visit the [live demo](https://wallet-worker-67guwtpfwq-uw.a.run.app/) and make sure you have popups enabled. A popup window will request permission to manage credentials. Afterwards, click on Login. You will be logged in as a test user called GaryLewis, and a unique DID will be generated for that wallet (stored in Web Local Storage). 
+To start the wallet demo, you need to first authorize the application to manage Verifiable Credentials for you. Visit the [live demo](https://wallet-worker-67guwtpfwq-uw.a.run.app/) and make sure you have popups enabled. A popup window will request permission to manage credentials. Afterwards, click on Login. You will be logged in as a test user called GaryLewis, and a unique DID will be generated for that wallet (stored in Web Local Storage). :warning: Note that at any point you can click the `Reset and Logout` button located on the bottom right corner of the screen to reset the entire process.
 
 ### Issuer Flow
 
@@ -25,7 +25,7 @@ Then, visit the [VC-playground](https://vcplayground.org) website and start with
 <!-- ![credentials-issuer-flow](img/credentials-issuer-flow.png) -->
 <img src="img/credentials-issuer-flow.png" alt= “” width="1000px" height="auto">
 
-These have to be issued one by one. First click on the credential you'd like to issue and then click on Issue Credentials.
+These have to be issued one by one. First click on the credential you'd like to issue and then click on `Issue Verifiable Credential`.
 
 Select `DID Authentication` (as per JFF Plugfest 3's requirements). A screen will give you the option to authenticate with your wallet's DID and sign the credential that you'd like to issue. Once that is done, you can see the generated VC and click `Add To Wallet` to import it into your wallet.
 
@@ -35,10 +35,10 @@ This will open up your wallet in another tab. You can then click on the credenti
 Once you have stored credentials that you'd like to verify, you can click on the Verifier Flow in the [VC-playground](https://vcplayground.org/) and start the verification process there. Select the credentials that you'd like to verify, then your wallet from the dropdown list. Then, on the wallet's page select those credentials from your current wallet's contents and click `Share`. This will generate a signed Verifiable Presentation with those credentials, and redirect you back to the VC-playground where you can see the finished VP. [A sample of that VP](vp-sample.json) is provided in this repository.
 
 ### Jobspeaker Issuing & Badge Prototypes
-At once point there was a lot of focus into issuing credentials verified within the Jobspeaker platform rather than becoming a wallet provider. A sample OpenBadgeV3 Credential from an University course verified as completed from Jobspeaker is provided  [here](jobspeaker-vc-sample.json).
-[jobspeaker-badge-sample](https://i.imgur.com/KQdB7Wp.png)
-## Jobspeaker 
-### Dependencies
+At one point there was a lot of focus into issuing credentials verified within the Jobspeaker platform rather than becoming a wallet provider. A sample OpenBadgeV3 Credential issued during that time from an University course verified as completed from Jobspeaker is provided [here](jobspeaker-vc-sample.json).
+
+![jobspeaker-badge-sample](https://i.imgur.com/KQdB7Wp.png)
+## Dependencies
 
 - [vite](https://vitejs.dev/)
 - [@digitalbazaar/did-method-key](https://github.com/digitalbazaar/did-method-key)
@@ -54,5 +54,6 @@ At once point there was a lot of focus into issuing credentials verified within 
 
 Special thanks go out to:
 - Ganesh Annan & Benjamin Young from Digital Bazaar, for quickly assisting us with CHAPI integration and many DID authentication hurdles
+- [Diogo Queiroz](https://github.com/diogolsq) from Fetchly Labs, co-developer of this application
 - Brian Richter from Aviary Technologies, who helped debug several Verifier Flow bugs (See the [1keep](https://1keep.com/) wallet in action!)
-- Temitope Sonuyi from Ogun Labs for suggesting some helpful alternative libraries
+- Temitope Sonuyi from Ogun Labs for sharing niceà pointers around DID Authentication
