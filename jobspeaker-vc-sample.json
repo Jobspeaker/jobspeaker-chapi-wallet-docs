@@ -1,0 +1,30 @@
+{
+  "type": ["OpenBadgeCredential"],
+  "@context": [
+    null
+  ],
+  "credentialSubject": {
+    "vendorUserId": "{{{email}}}",
+    "type": "AchievementSubject",
+    "achievement": {
+      "id": "https://velocitynetwork.foundation/credentials/openbadgecredential-5",
+      "type": "Achievement",
+      "name": "Business Intelligence Course Completion",
+      "description": "This student has completed the Business Intelliegence Course and now has a verifiable credential to show for it", 
+      "creator": {
+        "id": "did:ion:EiBo-j-ibHpSzvFxS-uGAZnWWEBOBWCXtOvwLWD9ZgdwSA",
+        "type": "Profile"
+      },
+      "criteria": {
+        "id": "https://www.lipsum.com/feed/html",
+        "type": "Criteria",
+        "narrative": "Fulfill all coursework and classes required for the course completion, as well as learn any involved skills within"
+      },
+      "image": {
+        "id": "https://i.imgur.com/KQdB7Wp.png",
+        "type": "Image"
+      }
+    }
+    
+  }
+}
