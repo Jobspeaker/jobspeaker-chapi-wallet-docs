@@ -56,4 +56,4 @@ Special thanks go out to:
 - Ganesh Annan & Benjamin Young from Digital Bazaar, for quickly assisting us with CHAPI integration and many DID authentication hurdles
 - [Diogo Queiroz](https://github.com/diogolsq) from Fetchly Labs, co-developer of this application
 - Brian Richter from Aviary Technologies, who helped debug several Verifier Flow bugs (See the [1keep](https://1keep.com/) wallet in action!)
-- Temitope Sonuyi from Ogun Labs for sharing niceà pointers around DID Authentication
+- Temitope Sonuyi from Ogun Labs for sharing nice pointers around DID Authentication
